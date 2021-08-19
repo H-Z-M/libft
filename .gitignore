@@ -6,3 +6,4 @@ ft_memccpy.c
 tmp
 leaks.c
 segf.c
+main
