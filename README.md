@@ -1207,6 +1207,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 </details>
 
 </details>
-
-[C言語のunsigned char型が想像以上に沼だった話](https://qiita.com/mizcii/items/a5adb7a56b1c4a31951a)  
-[ポインタ④（バイト単位の処理） | Programming Place Plus　Ｃ言語編　第３４章](https://programming-place.net/ppp/contents/c/034.html)
