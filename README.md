@@ -138,7 +138,7 @@ void	ft_putnbr_fd(int n, int fd);
 
 
 ### Bonus part
-以下の構造体を使ってリストの要素を表現する。この構造体はlibft.hファイルに追加する必要がある。
+**以下の構造体を使ってリストの要素を表現する。この構造体はlibft.hファイルに追加する必要がある。**
 - content	: その要素に含まれるデータ。
 - next		: 次の要素のアドレス。最後の要素であればNULL。
 
@@ -147,7 +147,7 @@ typedef struct	s_list
 {
     void          *content;
     struct s_list *next;
-}				t_list;
+}	t_list;
 ```
 
 
