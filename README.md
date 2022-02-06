@@ -13,14 +13,15 @@ atoi bzero calloc isalnum isalpha ascii isdigit isprint memchr memcmp memcpy mem
 
 ### Part 2 - Additional functions
 **このPart2ではlibcに含まれていないか、または別の形で含まれている関数をコーディングする必要がある。**  
-
-		char *ft_substr(char const *s, unsigned int start, size_t len);
-
+- ft_substr  
 **description**  
 文字列's'の複製を(malloc(3)を使って)確保して返す。
 文字列はインデックス 'start' から始まり、最大サイズ 'len' である。  
 **return value**  
 文字列's'の複製を確保して返す。 割り当てに失敗した場合はNULLを返す。
+
+		char *ft_substr(char const *s, unsigned int start, size_t len);
+
 ft_strjoin
 ft_strtrim
 ft_split
