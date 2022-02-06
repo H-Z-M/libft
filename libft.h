@@ -6,7 +6,7 @@
 /*   By: sudatsu <sudatsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 16:10:18 by sudatsu           #+#    #+#             */
-/*   Updated: 2021/08/17 18:51:46 by sudatsu          ###   ########.fr       */
+/*   Updated: 2022/02/06 19:07:12 by sudatsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# define LONG_MAX  0x7FFFFFFFFFFFFFFF
-# define LONG_MIN  0x8000000000000000
+# include <limits.h>
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
