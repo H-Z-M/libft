@@ -140,13 +140,116 @@ void	ft_putnbr_fd(int n, int fd);
 
 ### Bonus part
 以下の構造体を使ってリストの要素を表現する。この構造体はlibft.hファイルに追加する必要がある。
-- content : その要素に含まれるデータ。
-- next    : 次の要素のアドレス。最後の要素であればNULL。
+- content	: その要素に含まれるデータ。
+- next		: 次の要素のアドレス。最後の要素であればNULL。
 
 ```
-typedef struct s_list
+typedef struct	s_list
 {
     void          *content;
     struct s_list *next;
-}t_list;
+}				t_list;
 ```
+
+
+<details>
+<summary>ft_lstnew</summary>
+
+### description
+新しい要素を（malloc(3)で）確保して返す。変数 'content' は引数 'content' の値で初期化され、変数'next'はNULLで初期化される。
+### return value
+新しい要素を返す。
+```
+t_list	*ft_lstnew(void *content);
+```
+</details>
+
+<details>
+<summary>ft_lstadd_front</summary>
+
+### description
+要素'new'をリストの先頭に追加する。
+```
+void	ft_lstadd_front(t_list **lst, t_list *new);
+```
+</details>
+
+<details>
+<summary>ft_lstsize</summary>
+
+### description
+リストの要素数をカウントする。
+### return value
+要素数を返す。
+```
+int	ft_lstsize(t_list *lst);
+```
+</details>
+
+<details>
+<summary>ft_lstlast</summary>
+
+### description
+リストの最後の要素を返す。
+### return value
+リストの最後の要素を返す。
+```
+t_list	*ft_lstlast(t_list *lst);
+```
+</details>
+
+<details>
+<summary>ft_lstadd_back</summary>
+
+### description
+リストの最後に要素'new'を追加する。
+```
+void	ft_lstadd_back(t_list **lst, t_list *new);
+```
+</details>
+
+<details>
+<summary>ft_lstdelone</summary>
+
+### description
+データを削除する関数delを使いlstのcontentのデータを削除する。
+content削除後、リストをfreeする。
+nextはfreeしてはいけない。
+```
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+```
+</details>
+
+<details>
+<summary>ft_lstclear</summary>
+
+### description
+指定された要素すべてを削除する関数delを使用し、freeする。
+最後にnextがさすポインタをNULLに設定する必要がある。
+```
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+```
+</details>
+
+<details>
+<summary>ft_lstiter</summary>
+
+### description
+lstの各contentへ関数fを適用する。
+```
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+```
+</details>
+
+<details>
+<summary>ft_lstmap</summary>
+
+### description
+lstの名contentに関数「f」を適用し、新しいリストを作成する。
+del関数は必要に応じて、コンテンツを削除する。
+### return value
+新しいリスト。割り当てが失敗した場合はNULL。
+```
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+```
+</details>
