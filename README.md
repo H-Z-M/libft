@@ -7,8 +7,7 @@
 
 
 ### Part 1 - Libc functions
-**この最初のパートではマニュアルで定義されているlibc関数を再コーディングする必要がある。**  
-**オリジナルと同じ動作を示し、関数名の前には、"ft_"を付けなければならない。例えば、strlen は ft_strlen となる。**  
+**この最初のパートではマニュアルで定義されているlibc関数を再コーディングする必要がある。オリジナルと同じ動作を示し、関数名の前には"ft_"を付けなければならない。例えば、strlen は ft_strlen となる。**  
 atoi bzero calloc isalnum isalpha ascii isdigit isprint memchr memcmp memcpy memmove memset strchr strdup strlcat strlcpy strlen strncmp strnstr strrchr tolower toupper
 
 ### Part 2 - Additional functions
