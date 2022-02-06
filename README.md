@@ -79,7 +79,7 @@ char	*ft_itoa(int n);
 <summary>ft_strmapi</summary>
 
 ### description
-文字列's'の各文字に関数'f'を適用し、新しい文字列を作成します。（malloc(3)を使用）
+文字列's'の各文字に関数'f'を適用し、新しい文字列を作成する。（malloc(3)を使用）
 ### return value
 関数f' を連続して適用して作成した文字列。 割り当てに失敗した場合はNULLを返す。
 ```
@@ -92,7 +92,6 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 
 ### description
 引数として渡された文字列に関数'f'を適用し、必要に応じて変更する。
-### return value
 ```
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 ```
@@ -103,7 +102,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 ### description
 文字'c'を指定されたファイルディスクリプターに出力する。
-### return value
 ```
 void	ft_putchar_fd(char c, int fd);
 ```
@@ -114,7 +112,6 @@ void	ft_putchar_fd(char c, int fd);
 
 ### description
 文字列's'を指定されたファイルディスクリプターに出力する。
-### return value
 ```
 void	ft_putstr_fd(char *s, int fd);
 ```
@@ -125,7 +122,6 @@ void	ft_putstr_fd(char *s, int fd);
 
 ### description
 文字列's'を指定されたファイルディスクリプターに出力する。その後に改行を入れる。
-### return value
 ```
 void	ft_putendl_fd(char *s, int fd);
 ```
@@ -136,8 +132,21 @@ void	ft_putendl_fd(char *s, int fd);
 
 ### description
 整数'n'を指定されたファイルディスクリプターに出力する。
-### return value
 ```
 void	ft_putnbr_fd(int n, int fd);
 ```
 </details>
+
+
+### Bonus part
+以下の構造体を使ってリストの要素を表現する。この構造体はlibft.hファイルに追加する必要がある。
+- content : その要素に含まれるデータ。
+- next    : 次の要素のアドレス。最後の要素であればNULL。
+
+```
+typedef struct s_list
+{
+    void          *content;
+    struct s_list *next;
+}t_list;
+```
