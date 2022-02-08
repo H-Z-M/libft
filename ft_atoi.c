@@ -6,7 +6,7 @@
 /*   By: sudatsu <sudatsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 12:00:32 by sudatsu           #+#    #+#             */
-/*   Updated: 2022/02/06 20:47:36 by sudatsu          ###   ########.fr       */
+/*   Updated: 2022/02/08 22:22:02 by sudatsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static long	ft_isoverflow(int neg)
 	return (LONG_MAX);
 }
 
-static long	ft_calculate(const char *s, int neg, unsigned long cutoff, int cutlim)
+static long	ft_calc(const char *s, int neg, unsigned long cutoff, int cutlim)
 {
 	unsigned long	acc;
 	int				any;
@@ -78,5 +78,5 @@ int	ft_atoi(const char *str)
 		cutoff = LONG_MAX;
 	cutlim = cutoff % 10;
 	cutoff /= 10;
-	return ((int)ft_calculate(s, neg, cutoff, cutlim));
+	return ((int)ft_calc(s, neg, cutoff, cutlim));
 }
